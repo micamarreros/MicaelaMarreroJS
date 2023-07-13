@@ -127,3 +127,11 @@ function crearProducto () {
     let producto = new Producto(nombre, precio, tipoCliente)
     return producto
 }
+
+/*Ciclo para evitar agregar más de 10 productos al carrito */
+
+var x = 0;
+while (x <11) {
+    console.log ("Agregaste " + x + " productos al carrito");
+    x++;
+}
