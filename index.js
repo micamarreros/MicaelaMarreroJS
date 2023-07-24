@@ -5,96 +5,59 @@ let saludo = alert("Hola " + nombreIngresado + " bienvenid@ a mi web");
 
 let aclaracionPrecios = alert("Te invito a descubrir los diferentes precios de este tarifario");
 
+const productos1 = [
+    {nombre: "Logo", precio: 2400, categoriaProducto: "Branding"},
+    {nombre: "Identidad", precio: 6000, categoriaProducto: "Branding"},
+    {nombre: "Manual", precio: 5000, categoriaProducto: "Branding"},
+    {nombre: "Papelería", precio: 2500, categoriaProducto: "Branding"},
+]
+
+const productos2 = [
+    {nombre: "Etiqueta", precio: 1200, categoriaProducto: "Packaging"},
+    {nombre: "Stickers", precio: 450, categoriaProducto: "Packaging"},
+]
+
+const productos3 = [
+    {nombre: "Folleto Díptico", precio: 1400, categoriaProducto: "Editorial"},
+    {nombre: "Folleto Tríptico", precio: 1800, categoriaProducto: "Editorial"},
+    {nombre: "Brochure", precio: 3000, categoriaProducto: "Editorial"},
+    {nombre: "Afiche", precio: 2300, categoriaProducto: "Editorial"},
+    {nombre: "Aviso", precio: 500, categoriaProducto: "Editorial"},
+]
+
+const productos4 = [
+    {nombre: "Feed", precio: 5500, categoriaProducto: "Redes"},
+    {nombre: "Plantilla", precio: 1000, categoriaProducto: "Redes"},
+]
+
+
 let categoriaProducto = prompt("Elegí la categoría que te interese:\n1) Branding \n2) Packaging \n3) Editoriales \n4) Redes Sociales");
-console.log(parseInt(categoriaProducto));
+console.log(parseInt(categoriaProducto))
 
 switch(categoriaProducto) {
     case "1":
-		let categoriaBranding = prompt("Ingresá el producto que te interesa: \n1) Logo \n2) Identidad de marca \n3) Manual de marca \n4)Papelería corporativa");
-        switch (categoriaBranding) {
-			case "1":
-				let precioLogo = alert("El precio es 2400");
-				break;
-
-			case "2":
-				let precioIdentidad = alert("El precio es 6000");
-				break;
-
-            case "3":
-                let precioManual = alert("El precio es 5000");
-                break;
-            
-            case "4":
-                let precioPapeleria = alert("El precio es 2500");
-                break;
-            
-            default:
-                console.log("El valor ingresado no es válido");
-                break;
-		}
+		let categoriaBranding = alert("Aquí podrás ver todos los productos de la categoría Branding");
+        let productoBranding = productos1.map((productoBranding) => productoBranding.nombre + " $ UYU " + productoBranding.precio);
+        alert(productoBranding.join(" // "));
 		break;
     
     case "2":
-		let categoriaPackaging = prompt("Ingresá el producto que te interesa: \n1) Etiqueta \n2) Stickers");
-        switch (categoriaPackaging) {
-			case "1":
-				let precioEtiqueta = alert("El precio es 1200");
-				break;
-
-			case "2":
-				let precioStickers = alert("El precio es 450");
-				break;
-            
-            default:
-                console.log("El valor ingresado no es válido");
-                break;
-		}
+		let categoriaPackaging = alert("Aquí podrás ver todos los productos de la categoría Packaging");
+        let productoPackaging = productos2.map((productoPackaging) => productoPackaging.nombre + " $ UYU " + productoPackaging.precio);
+        alert(productoPackaging.join(" // "));
 		break;
 
     case "3":
-		let categoriaEditoriales = prompt("Ingresá el producto que te interesa: \n1) Folleto díptico \n2) Folleto tríptico \n3) Brochure (máx. 10 pág.) \n4) Afiche \n5) Aviso publicitario");
-        switch (categoriaPackaging) {
-			case "1":
-				let precioFolletoDip = alert("El precio es 1400");
-				break;
-
-			case "2":
-				let precioFolletoTrip= alert("El precio es 1800");
-				break;
-            
-            case "3":
-                let precioBrochure= alert("El precio es 3000");
-                break;
-            
-            case "4":
-                let precioAfiche= alert("El precio es 2300");
-                break;
-            
-            case "5":
-                let precioAviso = alert("El precio es 500");
-            
-            default:
-                console.log("El valor ingresado no es válido");
-                break;
-		}
+		let categoriaEditorial = alert("Aquí podrás ver todos los productos de la categoría Editorial");
+        let productoEditorial = productos3.map((productoEditorial) => productoEditorial.nombre + " $ UYU " + productoEditorial.precio);
+        alert(productoEditorial.join(" // "));
 		break;
 
     case "4":
-        let categoriaRedes = prompt("Ingresá el producto que te interesa: \n1) Diseño de feed \n2) Plantillas para posteos");
-        switch (categoriaRedes) {
-            case "1":
-                let precioFeed = alert("El precio es 5500");
-                break;
-    
-            case "2":
-                let precioPlantillas = alert("El precio es 1000");
-                break;
-                
-            default:
-                console.log("El valor ingresado no es válido");
-                break;
-            }
-        break;
+        let categoriaRedes = alert("Aquí podrás ver todos los productos de la categoría Redes");
+        let productoRedes = productos4.map((productoRedes) => productoRedes.nombre + " $ UYU " + productoRedes.precio);
+        alert(productoRedes.join(" // "));
+		break;
 
     default:
         console.log("El valor ingresado no es válido");
@@ -110,7 +73,7 @@ class Producto {
         this.nombre = nombre;
         this.precio = precio;
         this.categoria = categoria;
-        this.tipoCliente;
+        this.tipoCliente = tipoCliente;
     }
 
     calcularPrecioClienteA() {
@@ -124,13 +87,13 @@ class Producto {
 
 function crearProducto () {
     let tipoCliente = prompt ("Tipo de cliente A: particulares, emprendimientos o empresas unipersonales.")
-    let producto = new Producto(nombre, precio, tipoCliente)
+    let producto = new Producto(nombre, precio, categoria, tipoCliente)
     return producto
 }
 
 /*Ciclo para evitar agregar más de 10 productos al carrito */
 
-var x = 0;
+let productosAgregados = 0;
 while (x <11) {
     console.log ("Agregaste " + x + " productos al carrito");
     x++;
