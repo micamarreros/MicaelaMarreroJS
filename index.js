@@ -1,3 +1,31 @@
+// Calculo de precio de acuerdo al tipo de cliente.: tipo A o tipo B 
+// Cliente A: particulares, emprendimientos o empresas unipersonales. 
+// Cliente B: Empresas medianas, grandes u organismos estatales
+
+class Producto {
+    constructor (nombre, precio, tipoCliente){
+        this.nombre = nombre;
+        this.precio = precio;
+        this.categoria = categoria;
+        this.tipoCliente = tipoCliente;
+    }
+
+    calcularPrecioClienteA() {
+        if (this.tipoCliente == "A") {
+            return this.precio;
+        } else {
+            return this.precio * 4.5;
+        }
+    }
+}
+
+function crearProducto (nombre, precio, categoria) {
+    let tipoCliente = prompt ("Tipo de cliente A: particulares, emprendimientos o empresas unipersonales.")
+    let producto = new Producto(nombre, precio, categoria)
+    producto.tipoCliente = tipoCliente
+    return producto
+}
+
 let nombreIngresado = prompt("Ingresá tu nombre");
 let saludo = alert("Hola " + nombreIngresado + " bienvenid@ a mi web");
 
@@ -6,35 +34,34 @@ let saludo = alert("Hola " + nombreIngresado + " bienvenid@ a mi web");
 let aclaracionPrecios = alert("Te invito a descubrir los diferentes precios de este tarifario");
 
 const productos1 = [
-    {nombre: "Logo", precio: 2400, categoriaProducto: "Branding", tipoCliente: "A"},
-    {nombre: "Identidad", precio: 6000, categoriaProducto: "Branding", tipoCliente: "A"},
-    {nombre: "Manual", precio: 5000, categoriaProducto: "Branding", tipoCliente: "A"},
-    {nombre: "Papelería", precio: 2500, categoriaProducto: "Branding", tipoCliente: "A"},
+    {nombre: "Logo", precio: 2400, categoria: "Branding", tipoCliente: "A"},
+    {nombre: "Identidad", precio: 6000, categoria: "Branding", tipoCliente: "A"},
+    {nombre: "Manual", precio: 5000, categoria: "Branding", tipoCliente: "A"},
+    {nombre: "Papelería", precio: 2500, categoria: "Branding", tipoCliente: "A"},
 ]
 
 const productos2 = [
-    {nombre: "Etiqueta", precio: 1200, categoriaProducto: "Packaging", tipoCliente: "A"},
-    {nombre: "Stickers", precio: 450, categoriaProducto: "Packaging", tipoCliente: "A"},
+    {nombre: "Etiqueta", precio: 1200, categoria: "Packaging", tipoCliente: "A"},
+    {nombre: "Stickers", precio: 450, categoria: "Packaging", tipoCliente: "A"},
 ]
 
 const productos3 = [
-    {nombre: "Folleto Díptico", precio: 1400, categoriaProducto: "Editorial", tipoCliente: "A"},
-    {nombre: "Folleto Tríptico", precio: 1800, categoriaProducto: "Editorial", tipoCliente: "A"},
-    {nombre: "Brochure", precio: 3000, categoriaProducto: "Editorial", tipoCliente: "A"},
-    {nombre: "Afiche", precio: 2300, categoriaProducto: "Editorial", tipoCliente: "A"},
-    {nombre: "Aviso", precio: 500, categoriaProducto: "Editorial", tipoCliente: "A"},
+    {nombre: "Folleto Díptico", precio: 1400, categoria: "Editorial", tipoCliente: "A"},
+    {nombre: "Folleto Tríptico", precio: 1800, categoria: "Editorial", tipoCliente: "A"},
+    {nombre: "Brochure", precio: 3000, categoria: "Editorial", tipoCliente: "A"},
+    {nombre: "Afiche", precio: 2300, categoria: "Editorial", tipoCliente: "A"},
+    {nombre: "Aviso", precio: 500, categoria: "Editorial", tipoCliente: "A"},
 ]
 
 const productos4 = [
-    {nombre: "Feed", precio: 5500, categoriaProducto: "Redes", tipoCliente: "A"},
-    {nombre: "Plantilla", precio: 1000, categoriaProducto: "Redes", tipoCliente: "A"},
+    {nombre: "Feed", precio: 5500, categoria: "Redes", tipoCliente: "A"},
+    {nombre: "Plantilla", precio: 1000, categoria: "Redes", tipoCliente: "A"},
 ]
 
+let categoria = prompt("Elegí la categoría que te interese:\n1) Branding \n2) Packaging \n3) Editoriales \n4) Redes Sociales");
+console.log(parseInt(categoria))
 
-let categoriaProducto = prompt("Elegí la categoría que te interese:\n1) Branding \n2) Packaging \n3) Editoriales \n4) Redes Sociales");
-console.log(parseInt(categoriaProducto))
-
-switch(categoriaProducto) {
+switch(categoria) {
     case "1":
 		let categoriaBranding = alert("Aquí podrás ver todos los productos de la categoría Branding");
         let productoBranding = productos1.map((productoBranding) => productoBranding.nombre + " $ UYU " + productoBranding.precio);
@@ -64,37 +91,10 @@ switch(categoriaProducto) {
         break;
 }
 
-// Calculo de precio de acuerdo al tipo de cliente.: tipo A o tipo B 
-// Cliente A: particulares, emprendimientos o empresas unipersonales. 
-// Cliente B: Empresas medianas, grandes u organismos estatales
-
-class Producto {
-    constructor (nombre, precio, tipoCliente){
-        this.nombre = nombre;
-        this.precio = precio;
-        this.categoria = categoria;
-        this.tipoCliente = tipoCliente;
-    }
-
-    calcularPrecioClienteA() {
-        if (this.tipoCliente == "A") {
-            return this.precio;
-        } else {
-            return this.precio * 4.5;
-        }
-    }
-}
-
-function crearProducto () {
-    let tipoCliente = prompt ("Tipo de cliente A: particulares, emprendimientos o empresas unipersonales.")
-    let producto = new Producto(nombre, precio, categoria, tipoCliente)
-    return producto
-}
-
 // Ciclo para evitar agregar más de 10 productos al carrito
 
 let productosAgregados = 0;
-while (x <11) {
+while (productosAgregados <11) {
     console.log ("Agregaste " + x + " productos al carrito");
-    x++;
+    productosAgregados++;
 }
