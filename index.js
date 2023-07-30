@@ -63,25 +63,25 @@ console.log(parseInt(categoria))
 
 switch(categoria) {
     case "1":
-		let categoriaBranding = alert("Aquí podrás ver todos los productos de la categoría Branding");
+		alert("Aquí podrás ver todos los productos de la categoría Branding");
         let productoBranding = productos1.map((productoBranding) => productoBranding.nombre + " $ UYU " + productoBranding.precio);
         alert(productoBranding.join(" // "));
 		break;
     
     case "2":
-		let categoriaPackaging = alert("Aquí podrás ver todos los productos de la categoría Packaging");
+		alert("Aquí podrás ver todos los productos de la categoría Packaging");
         let productoPackaging = productos2.map((productoPackaging) => productoPackaging.nombre + " $ UYU " + productoPackaging.precio);
         alert(productoPackaging.join(" // "));
 		break;
 
     case "3":
-		let categoriaEditorial = alert("Aquí podrás ver todos los productos de la categoría Editorial");
+		alert("Aquí podrás ver todos los productos de la categoría Editorial");
         let productoEditorial = productos3.map((productoEditorial) => productoEditorial.nombre + " $ UYU " + productoEditorial.precio);
         alert(productoEditorial.join(" // "));
 		break;
 
     case "4":
-        let categoriaRedes = alert("Aquí podrás ver todos los productos de la categoría Redes");
+        alert("Aquí podrás ver todos los productos de la categoría Redes");
         let productoRedes = productos4.map((productoRedes) => productoRedes.nombre + " $ UYU " + productoRedes.precio);
         alert(productoRedes.join(" // "));
 		break;
@@ -95,6 +95,6 @@ switch(categoria) {
 
 let productosAgregados = 0;
 while (productosAgregados <11) {
-    console.log ("Agregaste " + x + " productos al carrito");
+    console.log ("Agregaste " + productosAgregados + " productos al carrito");
     productosAgregados++;
 }
