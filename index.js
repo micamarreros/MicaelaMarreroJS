@@ -6,7 +6,6 @@ class Producto {
     constructor (nombre, precio, tipoCliente){
         this.nombre = nombre;
         this.precio = precio;
-        this.categoria = categoria;
         this.tipoCliente = tipoCliente;
     }
 
@@ -26,70 +25,60 @@ function crearProducto (nombre, precio, categoria) {
     return producto
 }
 
-let nombreIngresado = prompt("Ingresá tu nombre");
-let saludo = alert("Hola " + nombreIngresado + " bienvenid@ a mi web");
+const producto = document.getElementById("comprar");
+const verCarrito = document.getElementById("verCarrito");
 
-// Mi objetivo es crear un tarifario de diseño grafico en el que el cliente pueda ver precios y se realice el calculo del mismo dependiendo del tipo de cliente
-
-let aclaracionPrecios = alert("Te invito a descubrir los diferentes precios de este tarifario");
-
-const productos1 = [
-    {nombre: "Logo", precio: 2400, categoria: "Branding", tipoCliente: "A"},
-    {nombre: "Identidad", precio: 6000, categoria: "Branding", tipoCliente: "A"},
-    {nombre: "Manual", precio: 5000, categoria: "Branding", tipoCliente: "A"},
-    {nombre: "Papelería", precio: 2500, categoria: "Branding", tipoCliente: "A"},
+const productos = [
+    {nombre: "Logo", precio: 2400, tipoCliente: "A"},
+    {nombre: "Identidad", precio: 6000, tipoCliente: "A"},
+    {nombre: "Manual", precio: 5000, tipoCliente: "A"},
+    {nombre: "Papelería", precio: 2500, tipoCliente: "A"},
+    {nombre: "Etiqueta", precio: 1200, tipoCliente: 'A'},
+    {nombre: "Stickers", precio: 450, tipoCliente: "A"},
+    {nombre: "Folleto Díptico", precio: 1400, tipoCliente: "A"},
+    {nombre: "Folleto Tríptico", precio: 1800, tipoCliente: "A"},
+    {nombre: "Afiche", precio: 2300, tipoCliente: "A"},
+    {nombre: "Aviso", precio: 500, tipoCliente: "A"},
+    {nombre: "Feed Redes", precio: 5500, tipoCliente: "A"},
+    {nombre: "Plantilla Redes", precio: 1000, tipoCliente: "A"},
 ]
 
-const productos2 = [
-    {nombre: "Etiqueta", precio: 1200, categoria: "Packaging", tipoCliente: "A"},
-    {nombre: "Stickers", precio: 450, categoria: "Packaging", tipoCliente: "A"},
-]
+const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
 
-const productos3 = [
-    {nombre: "Folleto Díptico", precio: 1400, categoria: "Editorial", tipoCliente: "A"},
-    {nombre: "Folleto Tríptico", precio: 1800, categoria: "Editorial", tipoCliente: "A"},
-    {nombre: "Brochure", precio: 3000, categoria: "Editorial", tipoCliente: "A"},
-    {nombre: "Afiche", precio: 2300, categoria: "Editorial", tipoCliente: "A"},
-    {nombre: "Aviso", precio: 500, categoria: "Editorial", tipoCliente: "A"},
-]
-
-const productos4 = [
-    {nombre: "Feed", precio: 5500, categoria: "Redes", tipoCliente: "A"},
-    {nombre: "Plantilla", precio: 1000, categoria: "Redes", tipoCliente: "A"},
-]
-
-let categoria = prompt("Elegí la categoría que te interese:\n1) Branding \n2) Packaging \n3) Editoriales \n4) Redes Sociales");
-console.log(parseInt(categoria))
-
-switch(categoria) {
-    case "1":
-		alert("Aquí podrás ver todos los productos de la categoría Branding");
-        let productoBranding = productos1.map((productoBranding) => productoBranding.nombre + " $ UYU " + productoBranding.precio);
-        alert(productoBranding.join(" // "));
-		break;
-    
-    case "2":
-		alert("Aquí podrás ver todos los productos de la categoría Packaging");
-        let productoPackaging = productos2.map((productoPackaging) => productoPackaging.nombre + " $ UYU " + productoPackaging.precio);
-        alert(productoPackaging.join(" // "));
-		break;
-
-    case "3":
-		alert("Aquí podrás ver todos los productos de la categoría Editorial");
-        let productoEditorial = productos3.map((productoEditorial) => productoEditorial.nombre + " $ UYU " + productoEditorial.precio);
-        alert(productoEditorial.join(" // "));
-		break;
-
-    case "4":
-        alert("Aquí podrás ver todos los productos de la categoría Redes");
-        let productoRedes = productos4.map((productoRedes) => productoRedes.nombre + " $ UYU " + productoRedes.precio);
-        alert(productoRedes.join(" // "));
-		break;
-
-    default:
-        console.log("El valor ingresado no es válido");
-        break;
+for (const nombre of productos) {
+    guardarLocal("listaProductos", JSON.stringify(productos));
 }
+
+let carrito = [];
+
+productos.forEach((producto)=> {
+    let content = document.createElement("div");
+    content.className = "card";
+    content.innerHTML = `
+    <h3>${producto.nombre}</h3>
+    <p>${producto.precio} $</p>
+    `;
+
+    comprar.append(content);
+
+    let agregarAlCarrito = document.createElement("button")
+    agregarAlCarrito.innerText = "Agregar al carrito";
+    agregarAlCarrito.className = "comprar"
+
+    content.append(agregarAlCarrito);
+
+    agregarAlCarrito.addEventListener("click", () => {
+        carrito.push({
+            nombre: producto.nombre,
+            precio: producto.precio,
+            tipoCliente: producto.tipoCliente,
+        })
+    })
+});
+
+verCarrito.addEventListener("click", () => {
+    console.log("estas viendo el carrito");
+})
 
 // Ciclo para evitar agregar más de 10 productos al carrito
 
