@@ -1,0 +1,9 @@
+/*-- carpeta base --*/
+@import "../base/colors";
+@import "../base/font_sizes";
+
+body {
+    background-color: $light-purple;    
+    font-size: $f_1;
+    color: $dark-purple;
+}

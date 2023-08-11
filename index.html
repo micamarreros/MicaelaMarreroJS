@@ -2,16 +2,137 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    
+    <title>Micaela Marrero - Diseño Gráfico & Web</title>
+    <meta name="description" value="Diseño Gráfico y Web. Branding de marcas, packaging, diseño editorial, ilustraciones y más! Soluciones gráficas acordes a tus necesidades">
+    <meta name="keywords" value="Diseño gráfico, Diseño Web Front End, Branding de marcas, Soluciones gráficas">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="./css/main.css">
+
+    <!------- favicon ------->
+    <link rel="shortcut icon" href="./media/icon.png">
 </head>
+
 <body>
-    <h1>Hola, este es el tarifario de mi web</h1>
-    <p>Elegí tu pack para contratar mis servicios, si tenés alguna consulta no dudes en contactarme ;)</p>
+  <!----- INICIO NAVBAR ----->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" id="navbar">
+      <div class="container-fluid menu-nav">
+        <a class="navbar-brand" href="#">
+          <img src="./media/logo.png" alt="logo Micaela Marrero">
+        </a>
 
-    <div id="comprar" class="comprar-productos"></div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/acerca_de_mi.html">Acerca de mi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/tienda.html">Tienda</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!----- FIN NAVBAR ----->
+  
+  <!----- INICIO CAROUSEL ----->
+  <section class="container-fluid" id="carousel">
+    <div id="carouselAutoplaying" class="carousel slide" data-bs-ride="carousel">
+      <!----- slides ----->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./media/01carousel/01metro.jpg" class="d-block w-100" alt="identidad corporativa marca metro montevideo">
+        </div>
+        <div class="carousel-item">
+          <img src="./media/01carousel/02dinos.jpg" class="d-block w-100" alt="libro infantil diez pequeños dinosaurios">
+        </div>
+        <div class="carousel-item">
+          <img src="./media/01carousel/03organika.jpg" class="d-block w-100" alt="identidad corporativa marca de biocosmética organika">
+        </div>
+      </div>
 
-    <button id="verCarrito">Ver Carrito</button>
-    <script src="./index.js"></script>
+      <!----- botones prev & next ----->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+  <!----- FIN CAROUSEL ----->
+
+  <!----- INICIO WELCOME ----->
+  <section class="container-fluid" id="welcome">
+    <h1 class="text-center">¡Hola!</h1>
+
+    <p class="text-center"> 
+      Bienvenid@ a mi página web, lugar donde vas a poder ver más información sobre mi trabajo. <br>
+      Seguime en mis redes sociales y contactate conmigo por cualquier consulta ;)
+    </p>
+  </section>
+  <!----- FIN WELCOME ----->
+
+  <!----- INICIO FOOTER ----->
+  <footer>
+    <div class="container-fluid text-center" id="footer">
+      <div id="info">
+        <p>
+            theillustratedpixels@gmail.com <br>
+            +598 00 123456 <br>
+            Montevideo, Uruguay <br>
+        </p>
+      </div>
+
+      <div class="container" id="links-redes">
+        <a class="btn btn-link btn-light btn-floating m-0" href="https://www.linkedin.com/in/micaela-marrero/" role="button">
+          <img src="./media/00icons/linkedin.png" alt="logo Linkedin">
+        </a>
+        <a class="btn btn-link btn-light btn-floating m-0" href="https://www.instagram.com/theillustratedpixels/" role="button">
+          <img src="./media/00icons/instagram.png" alt="logo Instagram">
+        </a>
+        <a class="btn btn-link btn-light btn-floating m-0" href="https://www.behance.net/micaelamarrero" role="button">
+          <img src="./media/00icons/behance.png" alt="logo Behance">
+        </a>
+        <a class="btn btn-link btn-light btn-floating m-0" href="https://dribbble.com/micaelamarrero" role="button">
+          <img src="./media/00icons/dribble.png" alt="logo Dribble">
+        </a>
+        <a class="btn btn-link btn-light btn-floating m-0" href="https://github.com/micamarreros" role="button">
+          <img src="./media/00icons/github.png" alt="logo GitHub">
+        </a>
+      </div>
+      
+      <div id="copyright">
+        <p>© Micaela Marrero 2023</p>
+      </div>
+    </div>
+  </footer>
+  <!----- FIN FOOTER ----->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,1551 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500;1,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*-- carpeta base --*/
+/*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+/*-- carpeta views --*/
+/*-- carpeta base --*/ /*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+/*------ CARD -----*/
+#card, #tabla-info {
+  flex-direction: column;
+  padding: 40px 40px 0 40px;
+  color: #C09AC8;
+  transition: all 3s;
+}
+
+#card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: solid 5px #C09AC8;
+}
+#card p {
+  padding-top: 20px;
+  font-weight: 500;
+}
+
+/*------ TABLA INFO -----*/
+#tabla-info {
+  padding: 20px 40px 20px 40px;
+}
+#tabla-info ul {
+  list-style-type: none;
+}
+#tabla-info ul .year {
+  font-weight: bold;
+}
+#tabla-info ul .entity {
+  font-weight: 500;
+  font-style: italic;
+}
+#tabla-info ul .course {
+  font-weight: normal;
+}
+
+/*-- carpeta base --*/ /*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+#form_id {
+  padding: 40px;
+}
+#form_id form {
+  transition: all 3s;
+}
+#form_id form #nombre, #form_id form #apellido, #form_id form #email, #form_id form #telefono, #form_id form #mensaje {
+  border: #C09AC8 solid 1px;
+}
+
+/*-- carpeta base --*/ /*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+#carousel {
+  padding: 30px 20px 0 20px;
+}
+#carousel .carousel-inner {
+  border-radius: 20px;
+}
+
+#welcome {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #carousel {
+    padding: 40px 40px 0 40px;
+  }
+  #welcome {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1024px) {
+  #carousel {
+    padding: 50px 50px 0 50px;
+  }
+  #welcome {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1440px) {
+  #carousel {
+    padding: 80px 180px 0 180px;
+  }
+  #welcome {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    font-size: 1.4rem;
+  }
+}
+/*-- carpeta base --*/ /*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+#galeria {
+  flex-direction: column;
+  padding: 40px 0 40px 0;
+}
+#galeria img {
+  width: 80%;
+  border-radius: 20px;
+  border: #C09AC8 solid 4px;
+  transition: all 1s ease;
+  filter: saturate(0);
+}
+#galeria img:hover {
+  transition: all 1s ease;
+  filter: saturate(1);
+  transform: scale(1.1);
+}
+#galeria .portfolio-item {
+  padding: 20px;
+}
+#galeria .portfolio-item a {
+  display: flex;
+  justify-content: center;
+}
+
+/*------ proyectos individuales -----*/
+#proyecto {
+  background-color: #fff;
+}
+#proyecto #text-center {
+  padding: 40px 40px 20px 40px;
+}
+#proyecto #text-center h2 {
+  font-size: 1rem;
+  color: #fff;
+  background-color: #C09AC8;
+  border-radius: 20px;
+  padding: 10px;
+}
+#proyecto #proyect-img {
+  padding-bottom: 40px;
+}
+#proyecto #proyect-img img {
+  width: 100%;
+  padding: 0 20px 0 20px;
+}
+
+/*-- carpeta base --*/ /*-- carpeta base --*/ /* Colores */
+body {
+  background-color: #FBEBFF;
+  font-size: 1rem;
+  color: #C09AC8;
+}
+
+/* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta layout --*/
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#footer {
+  background-color: #C09AC8;
+  font-weight: 500;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  #footer {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  #footer {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  #footer {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  #footer img {
+    height: 25px;
+  }
+}
+@media (min-width: 768px) {
+  #footer img {
+    height: 30px;
+  }
+}
+@media (min-width: 1024px) {
+  #footer img {
+    height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  #footer img {
+    height: 50px;
+  }
+}
+
+#info {
+  padding-top: 20px;
+}
+
+#links-redes {
+  padding-top: 20px;
+}
+
+#copyright {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+/*-- carpeta base --*/ /* Borders */ /* Colores */ /* Widths */
+/* Heights */
+/* Widths & Heights */
+h1 {
+  font-style: 1.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/*------ para dispositivos medianos -----*/
+@media (min-width: 768px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+}
+/*------ para dispositivos desktop large -----*/
+@media (min-width: 992px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+}
+/*------ para dispositivos desktop xx-large -----*/
+@media (min-width: 1400px) {
+  h1 {
+    font-size: 1.9rem;
+  }
+}
+/*-- carpeta utilities--*/
+/*------ para distintos tamaños -----*/
+#navbar {
+  background-color: #C09AC8 !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+@media (max-width: 767px) {
+  .navbar-brand img {
+    height: 40px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 50px;
+    width: auto;
+    padding-left: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .navbar-brand img {
+    height: 60px;
+    width: auto;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1440px) {
+  .navbar-brand img {
+    height: 80px;
+    width: auto;
+    padding-left: 70px;
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+.nav-link:hover {
+  color: #FBEBFF;
+}
+@media (max-width: 767px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 768px) {
+  .nav-link {
+    font-size: 0.7rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+@media (min-width: 1440px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+}
+
+.navbar-nav {
+  padding-right: 50px;
+}
+
+/*-- carpeta utilities --*/
+/*------ para distintos tamaños -----*/
+#servicios {
+  flex-direction: column;
+  padding: 40px;
+  transition: all 3s;
+}
+
+/*# sourceMappingURL=main.css.map */

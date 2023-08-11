@@ -1,0 +1,56 @@
+/*-- carpeta base --*/
+@import "../base/body";
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta layout --*/
+@import "../layout/footer";
+@import "../layout/navbar";
+/*-- carpeta utilities --*/
+@import "../utilities/mixins";
+
+#carousel {
+    padding: 30px 20px 0 20px;
+    .carousel-inner {
+        border-radius: $b_20;
+    }
+}
+
+#welcome {
+    padding-top: $p20;
+    padding-bottom: $p20;
+}
+
+@include tablet {
+    #carousel {
+        padding: 40px 40px 0 40px;
+    }
+    #welcome {
+        padding-top: $p30;
+        padding-bottom: $p30;
+        font-size: $f_11;
+    }
+}
+@include desktop {
+    #carousel {
+        padding: 50px 50px 0 50px;
+    }
+    #welcome {
+        padding-top: $p40;
+        padding-bottom: $p40;
+        font-size: $f_12;
+    }
+}
+@include desktop-xl{
+    #carousel {
+        padding: 80px 180px 0 180px;
+    }
+    #welcome {
+        padding-top: $p50;
+        padding-bottom: $p50;
+        font-size: $f_14;
+    }
+}

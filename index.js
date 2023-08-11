@@ -55,13 +55,13 @@ productos.forEach((producto)=> {
     let content = document.createElement("div");
     content.className = "card";
     content.innerHTML = `
-    <h3>${producto.nombre}</h3>
+    <h4 class="nombreProducto">${producto.nombre}</h4>
     <p>${producto.precio} $</p>
     `;
 
     comprar.append(content);
 
-    let agregarAlCarrito = document.createElement("button")
+    let agregarAlCarrito = document.createElement("button");
     agregarAlCarrito.innerText = "Agregar al carrito";
     agregarAlCarrito.className = "comprar"
 

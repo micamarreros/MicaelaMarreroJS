@@ -1,0 +1,61 @@
+/*-- carpeta base --*/
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta utilities--*/
+@import "../utilities/mixins";
+
+#navbar {
+    background-color: $dark-purple !important; /*no pude cambiar el color de otra manera que no sea con !important*/
+}
+
+.navbar-brand img {
+    @include mobile {
+        height: $h40;
+        width: auto;
+        padding-left: $p20;
+    }
+    @include tablet {
+        height: $h50;
+        width: auto;
+        padding-left: $p20;
+    }
+    @include desktop {
+        height: $h60;
+        width: auto;
+        padding-left: $p50;
+    }
+    @include desktop-xl{
+        height: $h80;
+        width: auto;
+        padding-left: $p70;
+    }
+}
+
+.nav-link {
+    color: $white;
+    font-weight: bold;
+    padding: $p20;
+    &:hover {
+        color: $light-purple;
+    }
+    @include mobile {
+        font-size: $f_07;
+    }
+    @include tablet {
+        font-size: $f_07;
+    }
+    @include desktop {
+        font-size: $f_09;
+    }
+    @include desktop-xl{
+        font-size: $f_1;
+    }
+}
+
+.navbar-nav {
+    padding-right: $p50;
+}

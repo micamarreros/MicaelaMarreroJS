@@ -1,0 +1,23 @@
+/*-- carpeta base --*/
+@import "../base/body";
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta layout --*/
+@import "../layout/footer";
+@import "../layout/navbar";
+/*-- carpeta utilities --*/
+@import "../utilities/mixins";
+
+#form_id {
+    padding: $p40;
+    form {
+        #nombre, #apellido, #email, #telefono, #mensaje {
+            border: $dark-purple solid 1px;
+        }
+        transition: all 3s;
+    }
+}

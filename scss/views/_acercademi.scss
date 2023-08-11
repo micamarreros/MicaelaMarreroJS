@@ -1,0 +1,54 @@
+/*-- carpeta base --*/
+@import "../base/body";
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta layout --*/
+@import "../layout/footer";
+@import "../layout/navbar";
+/*-- carpeta utilities --*/
+@import "../utilities/mixins";
+
+/*------ CARD -----*/
+#card, #tabla-info {
+    flex-direction: column;
+    padding: 40px 40px 0 40px;
+    color: $dark-purple;
+    transition: all 3s;
+}
+
+#card {
+    img {
+        width: $wh_180;
+        height: $wh_180;
+        border-radius: $b_50percent;
+        border: solid $b_5 $dark-purple;
+    }
+    p {
+        padding-top: $p20;
+        font-weight: 500;
+    }
+}
+
+/*------ TABLA INFO -----*/
+#tabla-info {
+    padding: 20px 40px 20px 40px;
+    ul {
+        list-style-type: none;
+        .year{
+            font-weight: bold;
+        }
+        
+        .entity {
+            font-weight: 500;
+            font-style: italic;
+        }
+        
+        .course {
+            font-weight: normal;
+        }
+    }
+}

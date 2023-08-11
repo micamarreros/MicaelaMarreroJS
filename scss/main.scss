@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,500;1,700&display=swap');
+
+/*-- carpeta base --*/
+@import "base/body";
+@import "base/borders";
+@import "base/colors";
+@import "base/dimensions";
+@import "base/font_sizes";
+@import "base/paddings";
+@import "base/titulos";
+/*-- carpeta layout --*/
+@import "layout/footer";
+@import "layout/navbar";
+/*-- carpeta utilities --*/
+@import "utilities/mixins";
+/*-- carpeta views --*/
+@import "views/acercademi";
+@import "views/contacto";
+@import "views/home";
+@import "views/proyectos";
+@import "views/servicios";

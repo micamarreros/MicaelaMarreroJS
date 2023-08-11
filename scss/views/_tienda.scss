@@ -1,0 +1,24 @@
+/*-- carpeta base --*/
+@import "../base/body";
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta layout --*/
+@import "../layout/footer";
+@import "../layout/navbar";
+/*-- carpeta utilities --*/
+@import "../utilities/mixins";
+
+
+.tienda {
+    flex-direction: column;
+    padding: 40px 0 40px 0;
+}
+
+.card {
+    background-color: $light-purple;
+    padding: 40px 0 40px 0;
+}

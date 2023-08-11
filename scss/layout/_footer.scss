@@ -1,0 +1,55 @@
+/*-- carpeta base --*/
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta utilities--*/
+@import "../utilities/mixins";
+
+#footer {
+    background-color: $dark-purple;
+    font-weight: 500;
+    color: $white;
+    @include mobile {
+        font-size: $f_07;
+    }
+    @include tablet {
+        font-size: $f_07;
+    }
+    @include desktop {
+        font-size: $f_09;
+    }
+    @include desktop-xl{
+        font-size: $f_1;
+    }
+}
+
+#footer img {
+    @include mobile {
+        height: $h25;
+    }
+    @include tablet {
+        height: $h30;
+    }
+    @include desktop {
+        height: $h40;
+    }
+    @include desktop-xl{
+        height: $h50;
+    }
+}
+
+#info {
+    padding-top: $p20;
+}
+
+#links-redes {
+    padding-top: $p20;
+}
+
+#copyright {
+    padding-top: $p20;
+    padding-bottom: $p10;
+}

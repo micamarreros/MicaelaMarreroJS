@@ -1,0 +1,59 @@
+/*-- carpeta base --*/
+@import "../base/body";
+@import "../base/borders";
+@import "../base/colors";
+@import "../base/dimensions";
+@import "../base/font_sizes";
+@import "../base/paddings";
+@import "../base/titulos";
+/*-- carpeta layout --*/
+@import "../layout/footer";
+@import "../layout/navbar";
+/*-- carpeta utilities --*/
+@import "../utilities/mixins";
+
+#galeria {
+    flex-direction: column;
+    padding: 40px 0 40px 0;
+    img {
+        width: $wpercent_80;
+        border-radius: $b_20;
+        border: $dark-purple solid 4px;
+        transition: all 1s ease;
+        filter: saturate(0);
+        &:hover {
+            transition: all 1s ease;
+            filter: saturate(1);
+            transform: scale(1.1);
+        }
+    }
+    .portfolio-item {
+        padding: $p20;
+        a {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+/*------ proyectos individuales -----*/
+#proyecto {
+    background-color: $white;
+    #text-center {
+        padding: 40px 40px 20px 40px;
+        h2 {
+            font-size: $f_1;
+            color: $white;
+            background-color: $dark-purple;
+            border-radius: $b_20;
+            padding: $p10;
+        }
+    }
+    #proyect-img {
+        padding-bottom: $p40;
+        img {
+            width: $wpercent_100;
+            padding: 0 20px 0 20px;
+        }
+    }
+}
