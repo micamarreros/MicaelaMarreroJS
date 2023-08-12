@@ -29,18 +29,18 @@ const producto = document.getElementById("comprar");
 const verCarrito = document.getElementById("verCarrito");
 
 const productos = [
-    {nombre: "Logo", precio: 2400, tipoCliente: "A"},
-    {nombre: "Identidad", precio: 6000, tipoCliente: "A"},
-    {nombre: "Manual", precio: 5000, tipoCliente: "A"},
-    {nombre: "Papelería", precio: 2500, tipoCliente: "A"},
-    {nombre: "Etiqueta", precio: 1200, tipoCliente: 'A'},
-    {nombre: "Stickers", precio: 450, tipoCliente: "A"},
-    {nombre: "Folleto Díptico", precio: 1400, tipoCliente: "A"},
-    {nombre: "Folleto Tríptico", precio: 1800, tipoCliente: "A"},
-    {nombre: "Afiche", precio: 2300, tipoCliente: "A"},
-    {nombre: "Aviso", precio: 500, tipoCliente: "A"},
-    {nombre: "Feed Redes", precio: 5500, tipoCliente: "A"},
-    {nombre: "Plantilla Redes", precio: 1000, tipoCliente: "A"},
+    {id:"1", nombre: "Logo", precio: 2400, tipoCliente: "A"},
+    {id:"2", nombre: "Identidad", precio: 6000, tipoCliente: "A"},
+    {id:"3", nombre: "Manual", precio: 5000, tipoCliente: "A"},
+    {id:"4", nombre: "Papelería", precio: 2500, tipoCliente: "A"},
+    {id:"5", nombre: "Etiqueta", precio: 1200, tipoCliente: 'A'},
+    {id:"6", nombre: "Stickers", precio: 450, tipoCliente: "A"},
+    {id:"7", nombre: "Folleto Díptico", precio: 1400, tipoCliente: "A"},
+    {id:"8", nombre: "Folleto Tríptico", precio: 1800, tipoCliente: "A"},
+    {id:"9", nombre: "Afiche", precio: 2300, tipoCliente: "A"},
+    {id:"10", nombre: "Aviso", precio: 500, tipoCliente: "A"},
+    {id:"11", nombre: "Feed Redes", precio: 5500, tipoCliente: "A"},
+    {id:"12", nombre: "Plantilla Redes", precio: 1000, tipoCliente: "A"},
 ]
 
 const guardarLocal = (clave, valor) => { localStorage.setItem(clave, valor) };
@@ -53,10 +53,12 @@ let carrito = [];
 
 productos.forEach((producto)=> {
     let content = document.createElement("div");
-    content.className = "card";
+    content.className = "tarjeta";
     content.innerHTML = `
-    <h4 class="nombreProducto">${producto.nombre}</h4>
-    <p>${producto.precio} $</p>
+    <div>
+        <h4 class="nombreProducto">${producto.nombre}</h4>
+        <p>$ ${producto.precio}</p>
+    </div>
     `;
 
     comprar.append(content);

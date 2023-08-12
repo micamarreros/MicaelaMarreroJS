@@ -13,12 +13,14 @@
 @import "../utilities/mixins";
 
 
-#tienda {
+.tienda {
     flex-direction: column;
-    padding: 40px 0 40px 0;
+    padding: $p40 0 $p40 0;
 }
 
-#card {
-    background-color: $light-purple;
-    padding: 40px 0 40px 0;
+.tarjeta {
+    background-color: $white;
+    padding: $p40;
+    border-radius: $b_20;
+    border: $dark-purple solid 4px;
 }
