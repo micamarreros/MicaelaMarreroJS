@@ -29,8 +29,8 @@ const producto = document.getElementById("comprar");
 const verCarrito = document.getElementById("verCarrito");
 
 const productos = [
-    {id:"1", nombre: "Logo", precio: 2400, tipoCliente: "A"},
-    {id:"2", nombre: "Identidad", precio: 6000, tipoCliente: "A"},
+    {id:"1", img: "../media/05tienda/01logo.jpg",nombre: "Logo", precio: 2400, tipoCliente: "A"},
+    {id:"2", img: "../media/05tienda/02identidad.jpg",nombre: "Identidad", precio: 6000, tipoCliente: "A"},
     {id:"3", nombre: "Manual", precio: 5000, tipoCliente: "A"},
     {id:"4", nombre: "Papelería", precio: 2500, tipoCliente: "A"},
     {id:"5", nombre: "Etiqueta", precio: 1200, tipoCliente: 'A'},
@@ -56,21 +56,24 @@ productos.forEach((producto)=> {
     content.className = "tarjeta";
     content.innerHTML = `
     <div>
-        <h4 class="nombreProducto">${producto.nombre}</h4>
+        <img class="img-producto" src="${producto.img}" alt="${producto.nombre}">
+        <h4 class="nombre-producto">${producto.nombre}</h4>
         <p>$ ${producto.precio}</p>
     </div>
     `;
-
-    comprar.append(content);
 
     let agregarAlCarrito = document.createElement("button");
     agregarAlCarrito.innerText = "Agregar al carrito";
     agregarAlCarrito.className = "comprar"
 
+    comprar.append(content);
+
     content.append(agregarAlCarrito);
 
     agregarAlCarrito.addEventListener("click", () => {
         carrito.push({
+            id: producto.id,
+            img: producto.img,
             nombre: producto.nombre,
             precio: producto.precio,
             tipoCliente: producto.tipoCliente,
@@ -79,7 +82,9 @@ productos.forEach((producto)=> {
 });
 
 verCarrito.addEventListener("click", () => {
-    console.log("estas viendo el carrito");
+    const modalHeader = document.createElement("div");
+    modalHeader.className = "modal-header"
+    modal
 })
 
 // Ciclo para evitar agregar más de 10 productos al carrito
