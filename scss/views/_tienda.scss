@@ -12,14 +12,19 @@
 /*-- carpeta utilities --*/
 @import "../utilities/mixins";
 
-.comprar {
+.tienda {
+    .intro-tienda {
+        padding-top: $p40;
+        border-radius: $b_20;
+    }
+    .tarjeta {
+    background-color: $dark-purple;
+    padding: $p40;
+    .comprar {
     color: $dark-purple;
     padding: $p40;
     border: $dark-purple solid 4px;
     border-radius: $b_20;
-}
-
-.tarjeta {
-    background-color: $dark-purple;
-    padding: $p40;
+    }
+    }
 }
