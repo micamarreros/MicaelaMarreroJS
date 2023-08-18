@@ -16,10 +16,7 @@
     background-color: $dark-purple;
     padding: $p40;
     .tarjeta-producto {
-        max-width: $wpercent_80;
-        text-align: center;
-        background-color: $light-purple;
-        
+        padding: $p20;
         .btn-compra{
             border-radius: 5px;
             cursor: pointer;

@@ -6,6 +6,7 @@ const mostrarProductos = (dato) => {
     dato.forEach(producto =>{
         const tarjetaProducto = document.createElement("div");
         tarjetaProducto.className = "tarjeta-producto";
+        tarjetaProducto.id = "container-fluid col-sm-10 col-md-10 col-lg-10 col-xl-10 d-flex align-items-center";
         tarjetaProducto.innerHTML = `
                                     <img class="producto-img" src="${producto.img}" alt="${producto.nombre}">
                                     <div class="descripcion-productos">
