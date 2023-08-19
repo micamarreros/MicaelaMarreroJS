@@ -10,6 +10,7 @@
     <meta name="keywords" value="Diseño gráfico, Diseño Web Front End, Branding de marcas, Soluciones gráficas, Proyectos Diseño Gráfico">
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/main.css">
 
     <!------- favicon ------->
@@ -55,16 +56,47 @@
   <!----- FIN NAVBAR ----->
   
   <!----- INICIO TIENDA ----->
-  <div class="container-fluid col-sm-10 col-md-10 col-lg-10 col-xl-10 align-items-center" id="tienda">
-    <div class="container-fluid" id="intro-tienda">
-      <h2>Hola, esta es la tienda de mi web.</h2>
-      <p>Elegí tu pack para contratar mis servicios, si tenés alguna consulta no dudes en contactarme ;)</p>
-    </div>
+  
+  <div class="row flex-nowrap">      
+      <!----- ASIDE ----->
+      <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0">
+          <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" id="sidebar">
+              <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
+              </a>
+              <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="aside">
+                  <li class="nav-item">
+                      <button class="btn btn-secondary"><i class="bi bi-arrow-right-circle"></i> Todos los productos</button>  
+                  </li>
 
-    <div class="container-fluid col-sm-10 col-md-10 col-lg-10 col-xl-10 d-flex align-items-center" id="contenedor-productos"></div>
+                  <li class="nav-item">
+                    <button class="btn btn-secondary"><i class="bi bi-arrow-right-circle"></i> Identidad y logo</button>  
+                  </li>
+                  
+                  <li class="nav-item">
+                    <button class="btn btn-secondary"><i class="bi bi-arrow-right-circle"></i> Packaging</button>  
+                  </li>
 
-    <a class="btn btn-secondary" href="./carrito.html">Ver Carrito</a>
+                  <li class="nav-item">
+                    <button class="btn btn-secondary"><i class="bi bi-arrow-right-circle"></i> Otros</button>  
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="./carrito.html" class="nav-link align-middle px-0" id="ver-carrito">
+                      <i class="bi bi-cart4"></i> Ver Carrito</span>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <!----- ASIDE ----->
+
+      <!----- MAIN ----->
+      <div class="col py-3" id="contenedor-productos">
+        
+      </div>
+      <!----- MAIN ----->
   </div>
+
   <!----- FIN TIENDA ----->
 
   <!----- INICIO FOOTER ----->

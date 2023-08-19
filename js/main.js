@@ -6,7 +6,6 @@ const mostrarProductos = (dato) => {
     dato.forEach(producto =>{
         const tarjetaProducto = document.createElement("div");
         tarjetaProducto.className = "tarjeta-producto";
-        tarjetaProducto.id = "container-fluid col-sm-10 col-md-10 col-lg-10 col-xl-10 d-flex align-items-center";
         tarjetaProducto.innerHTML = `
                                     <img class="producto-img" src="${producto.img}" alt="${producto.nombre}">
                                     <div class="descripcion-productos">
@@ -28,7 +27,7 @@ const mostrarProductos = (dato) => {
 
 mostrarProductos(productos);
 
-const carrito = []
+const carrito = [];
 
 // Agrego al carrito, teniendo en cuenta la cantidad. Mi objetivo es evitar que se pueda agregar dos veces el mismo producto pero no logro visualizar como podría hacerse. 
 function agregarAlCarrito(id){
@@ -39,6 +38,9 @@ function agregarAlCarrito(id){
     } else {
         let productoEncontrado = productos.find( prod => prod.id == parseInt(id));
         carrito.push(productoEncontrado);
+        
+        // Guardo en local storage los productos del carrito
+        localStorage.setItem("productos-en-carrito", JSON.stringify(productoEncontrado));
     }
 }
 
@@ -49,16 +51,7 @@ total.className = "tarjeta-producto";
 total.innerHTML =   `
                         <span>0</span>
                     `;
-    contenedorProductos.append(total)
+    contenedorProductos.append(total);
     
 
 const guardarLocal = (producto, cantidad) => { localStorage.setItem(producto, cantidad) };
-
-
-/* // Ciclo para evitar agregar más de 10 productos al carrito
-
-let productosAgregados = 0;
-while (productosAgregados <11) {
-    console.log ("Agregaste " + productosAgregados + " productos al carrito");
-    productosAgregados++;
-} */ 

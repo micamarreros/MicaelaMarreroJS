@@ -1,20 +1,25 @@
 // Contenedor de todos los productos del carrito
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 
-// Contenedor de cada producto del carrito
-const verProductos = (productos) => {
-    productos.forEach(producto =>{
-        const tarjetaCarrito = document.createElement("div");
-        tarjetaCarrito.className = "tarjeta-carrito";
-        
-        contenedorProductos.appendChild(tarjetaCarrito);
-    })
-    const btnComprar = document.querySelectorAll('.btn-compra');
-    btnComprar.forEach(el => {
-        el.addEventListener('click', (e) =>{
-            agregarAlCarrito(e.target.id);
-        });
-    })
-}
+const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
 
-verProductos(productos);
+productosEnCarrito.innerHTML = "";
+
+productosEnCarrito.forEach(producto => {
+
+    const div = document.createElement("div");
+    div.classList.add("carrito-producto");
+    div.innerHTML= `
+    <img class="carrito-producto-img" src="${productos.img}" alt="${productos.nombre}">
+    <div class="carrito-descripcion-productos">
+        <h5 class="carrito-producto-nombre">${productos.nombre}</h5>
+        <p>$ ${productos.precio}</p>
+        <p>${productos.cantidad}</p>
+        <p>Subtotal ${productos.precio * productos.cantidad}</p>
+   
+        <button id='${productos.id}' class="btn-eliminar">Eliminar del carrito</button>
+    </div>
+`;
+productosEnCarrito.append(div);
+
+})
