@@ -17,7 +17,7 @@
     .tarjeta-producto {
         padding: $p20;
         .btn-compra{
-            border-radius: 5px;
+            border-radius: $p20;
             cursor: pointer;
         }
     }
