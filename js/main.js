@@ -54,4 +54,6 @@ total.innerHTML =   `
     contenedorProductos.append(total);
     
 
-const guardarLocal = (producto, cantidad) => { localStorage.setItem(producto, cantidad) };
+const guardarLocal = (producto, cantidad) => { 
+    localStorage.setItem((producto, cantidad), JSON.stringify)
+};

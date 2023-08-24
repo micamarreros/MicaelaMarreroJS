@@ -1,7 +1,8 @@
 // Contenedor de todos los productos del carrito
 const contenedorCarrito = document.getElementById("contenedor-carrito");
 
-const productosEnCarrito = JSON.parse(localStorage.getItem("productos-en-carrito"));
+let productosEnCarrito = localStorage.getItem("productos-en-carrito");
+productosEnCarrito = JSON.parse(productosEnCarrito);
 
 productosEnCarrito.innerHTML = "";
 
@@ -20,6 +21,7 @@ productosEnCarrito.forEach(producto => {
         <button id='${producto.id}' class="btn-eliminar">Eliminar del carrito</button>
     </div>
 `;
+    
 productosEnCarrito.append(div);
 
 })
