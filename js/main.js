@@ -1,9 +1,13 @@
 // Contenedor de todos los productos
 const contenedorProductos = document.getElementById("contenedor-productos");
+const botonesCategorias = document.querySelectorAll(".btn-categoria")
 
 // Contenedor de cada producto
-const mostrarProductos = (dato) => {
-    dato.forEach(producto =>{
+const mostrarProductos = (productosElegidos) => {
+
+    contenedorProductos.innerHTML = "";
+
+   productosElegidos.forEach(producto =>{
         const tarjetaProducto = document.createElement("div");
         tarjetaProducto.className = "tarjeta-producto";
         tarjetaProducto.innerHTML = `
@@ -21,15 +25,35 @@ const mostrarProductos = (dato) => {
     btnComprar.forEach(el => {
         el.addEventListener('click', (e) =>{
             agregarAlCarrito(e.target.id);
+            
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Se agregó el producto al carrito',
+                showConfirmButton: false,
+                timer: 1500
+              })
         });
     })
 }
 
 mostrarProductos(productos);
 
+botonesCategorias.forEach(boton => {
+    boton.addEventListener("click", (e) => {
+
+        if (e.currentTarget.id !="todos") {
+            const productosBoton = productos.filter(productos => productos.categoria.id === e.currentTarget.id);
+            mostrarProductos(productosBoton);
+        } else {
+            mostrarProductos(productos);
+        }
+    })
+})
+
 const carrito = [];
 
-// Agrego al carrito, teniendo en cuenta la cantidad. 
+// Agrego al carrito, teniendo en cuenta la cantidad.  
 function agregarAlCarrito(id){
     const exists = carrito.some(prod => prod.id === parseInt(id));
 

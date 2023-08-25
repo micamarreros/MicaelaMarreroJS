@@ -6,6 +6,8 @@ productosEnCarrito = JSON.parse(productosEnCarrito);
 
 productosEnCarrito.innerHTML = "";
 
+let botonEliminar = document.querySelectorAll(".btn-eliminar");
+
 productosEnCarrito.forEach(producto => {
 
     const div = document.createElement("div");
