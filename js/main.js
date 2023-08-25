@@ -39,6 +39,7 @@ const mostrarProductos = (productosElegidos) => {
 
 mostrarProductos(productos);
 
+// Filtro para productos con botones de categorias
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
 
@@ -57,10 +58,11 @@ const carrito = [];
 function agregarAlCarrito(id){
     const exists = carrito.some(prod => prod.id === parseInt(id));
 
-    if (exists){
+    if (exists){ 
         carrito.map(prod => producto.cantidad)
     } else {
         let productoEncontrado = productos.find( prod => prod.id == parseInt(id));
+        productoEncontrado.cantidad = 1;
         carrito.push(productoEncontrado);
         
         // Guardo en local storage los productos del carrito

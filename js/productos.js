@@ -7,8 +7,7 @@ const productos = [
         categoria: {
             nombre: "Identidad y logo",
             id: "identidad"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"2", 
@@ -18,8 +17,7 @@ const productos = [
         categoria: {
             nombre: "Identidad y logo",
             id: "identidad"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"3", 
@@ -29,8 +27,7 @@ const productos = [
         categoria: {
             nombre: "Identidad y logo",
             id: "identidad"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"4", 
@@ -40,8 +37,7 @@ const productos = [
         categoria: {
             nombre: "Identidad y logo",
             id: "identidad"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"5", 
@@ -51,8 +47,7 @@ const productos = [
         categoria: {
             nombre: "Packaging",
             id: "packaging"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"6", 
@@ -62,8 +57,7 @@ const productos = [
         categoria: {
             nombre: "Packaging",
             id: "packaging"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"7", 
@@ -73,8 +67,7 @@ const productos = [
         categoria: {
             nombre: "Editorial",
             id: "editorial"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"8", 
@@ -84,8 +77,7 @@ const productos = [
         categoria: {
             nombre: "Editorial",
             id: "editorial"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"9", 
@@ -95,8 +87,7 @@ const productos = [
         categoria: {
             nombre: "Otros",
             id: "otros"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"10", 
@@ -106,8 +97,7 @@ const productos = [
         categoria: {
             nombre: "Otros",
             id: "otros"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"11", 
@@ -117,8 +107,7 @@ const productos = [
         categoria: {
             nombre: "Redes",
             id: "redes"     
-        },
-        cantidad: 1
+        }
     },
     {
         id:"12", 
@@ -128,7 +117,6 @@ const productos = [
         categoria: {
             nombre: "Redes",
             id: "redes"     
-        },
-        cantidad: 1
+        }
     },
 ]
