@@ -22,6 +22,6 @@ productosEnCarrito.forEach(producto => {
     </div>
 `;
     
-productosEnCarrito.append(div);
+contenedorCarrito.append(div);
 
 })

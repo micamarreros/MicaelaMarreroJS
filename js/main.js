@@ -29,7 +29,7 @@ mostrarProductos(productos);
 
 const carrito = [];
 
-// Agrego al carrito, teniendo en cuenta la cantidad. Mi objetivo es evitar que se pueda agregar dos veces el mismo producto pero no logro visualizar como podría hacerse. 
+// Agrego al carrito, teniendo en cuenta la cantidad. 
 function agregarAlCarrito(id){
     const exists = carrito.some(prod => prod.id === parseInt(id));
 
@@ -40,7 +40,7 @@ function agregarAlCarrito(id){
         carrito.push(productoEncontrado);
         
         // Guardo en local storage los productos del carrito
-        localStorage.setItem("productos-en-carrito", JSON.stringify(productoEncontrado));
+        localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
     }
 }
 
@@ -52,8 +52,3 @@ total.innerHTML =   `
                         <span>0</span>
                     `;
     contenedorProductos.append(total);
-    
-
-const guardarLocal = (producto, cantidad) => { 
-    localStorage.setItem((producto, cantidad), JSON.stringify)
-};
