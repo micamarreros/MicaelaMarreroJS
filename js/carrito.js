@@ -18,7 +18,7 @@ productosEnCarrito.forEach(producto => {
         <p>${producto.cantidad}</p>
         <p>Subtotal ${producto.precio * producto.cantidad}</p>
    
-        <button class="btn-eliminar" onclick="eliminarTarea(${producto.id})">Eliminar del carrito</button>
+        <button class="btn-eliminar" onclick="eliminarDelCarrito(${producto.id})">Eliminar del carrito</button>
     </div>
 `;
     
