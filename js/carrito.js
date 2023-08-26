@@ -6,8 +6,6 @@ productosEnCarrito = JSON.parse(productosEnCarrito);
 
 productosEnCarrito.innerHTML = "";
 
-let botonEliminar = document.querySelectorAll(".btn-eliminar");
-
 productosEnCarrito.forEach(producto => {
 
     const div = document.createElement("div");
@@ -20,10 +18,27 @@ productosEnCarrito.forEach(producto => {
         <p>${producto.cantidad}</p>
         <p>Subtotal ${producto.precio * producto.cantidad}</p>
    
-        <button id='${producto.id}' class="btn-eliminar">Eliminar del carrito</button>
+        <button class="btn-eliminar" onclick="eliminarTarea(${producto.id})">Eliminar del carrito</button>
     </div>
 `;
     
 contenedorCarrito.append(div);
 
 })
+
+function eliminarDelCarrito(index) {
+    carrito.splice(index, 1);
+    
+    Swal.fire({
+        position: 'center',
+        icon: 'success',
+        title: 'Se eliminó el producto del carrito',
+        showConfirmButton: false,
+        timer: 1500
+    })
+
+    carrito();
+    
+    // Actualizo y guardo en local storage los productos del carrito
+    localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+}

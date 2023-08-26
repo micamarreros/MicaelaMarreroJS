@@ -32,8 +32,8 @@ const mostrarProductos = (productosElegidos) => {
                 title: 'Se agregó el producto al carrito',
                 showConfirmButton: false,
                 timer: 1500
-              })
-        });
+            })
+        })
     })
 }
 
@@ -56,6 +56,7 @@ const carrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 
 // Agrego al carrito, teniendo en cuenta la cantidad de producto  
 function agregarAlCarrito(id){
+    productoEncontrado = productos.find(prod => prod.id === id);
     const exists = carrito.some(prod => prod.id === id);
     
         if (exists){ 
