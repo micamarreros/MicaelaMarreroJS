@@ -35,9 +35,8 @@ function carrito(productosEnCarrito) {
 }
 
 function eliminarDelCarrito(id) {
-    
     // Obtengo el producto del array
-    const findProducto = productosEnCarrito.fin(e => e.id == id);
+    const findProducto = productosEnCarrito.find(e => e.id == id);
 
     const index = productosEnCarrito.indexOf(findProducto);
     
