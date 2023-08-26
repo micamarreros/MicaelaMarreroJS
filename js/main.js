@@ -57,17 +57,18 @@ const carrito = [];
 // Agrego al carrito, teniendo en cuenta la cantidad.  
 function agregarAlCarrito(id){
     const exists = carrito.some(prod => prod.id === parseInt(id));
-
-    if (exists){ 
-        carrito.map(prod => producto.cantidad)
-    } else {
-        let productoEncontrado = productos.find( prod => prod.id == parseInt(id));
-        productoEncontrado.cantidad = 1;
-        carrito.push(productoEncontrado);
-        
-        // Guardo en local storage los productos del carrito
-        localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
-    }
+    
+        if (exists){ 
+            const index = carrito.findIndex(prod => prod.id === parseInt(id));
+            carrito[index].cantidad++;
+        } else {
+            let productoEncontrado = productos.find( prod => prod.id == parseInt(id));
+            productoEncontrado.cantidad = 1;
+            carrito.push(productoEncontrado);
+            
+            // Guardo en local storage los productos del carrito
+            localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+        }
 }
 
 // Suma para el total del carrito a partir de span que comienza en cero
