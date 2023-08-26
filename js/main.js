@@ -54,7 +54,7 @@ botonesCategorias.forEach(boton => {
 
 const carrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 
-// Agrego al carrito, teniendo en cuenta la cantidad.  
+// Agrego al carrito, teniendo en cuenta la cantidad de producto  
 function agregarAlCarrito(id){
     const exists = carrito.some(prod => prod.id === id);
     
@@ -66,9 +66,10 @@ function agregarAlCarrito(id){
             productoEncontrado.cantidad = 1;
             carrito.push(productoEncontrado);
             
-            // Guardo en local storage los productos del carrito
-            localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
+            
         }
+// Guardo en local storage los productos del carrito
+    localStorage.setItem("productos-en-carrito", JSON.stringify(carrito));
 }
 
 // Suma para el total del carrito a partir de span que comienza en cero
