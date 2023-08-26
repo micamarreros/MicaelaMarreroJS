@@ -1,3 +1,11 @@
+// Fetch para traer productos
+fetch("./productos.json")
+    .then((response) => response.json())
+    .then((data) => {
+        productos = data;
+    mostrarProductos(productos);
+})
+
 // Contenedor de todos los productos
 const contenedorProductos = document.getElementById("contenedor-productos");
 const botonesCategorias = document.querySelectorAll(".btn-categoria")
@@ -32,8 +40,8 @@ const mostrarProductos = (productosElegidos) => {
                 title: 'Se agregó el producto al carrito',
                 showConfirmButton: false,
                 timer: 1500
-            })
-        })
+              })
+        });
     })
 }
 
