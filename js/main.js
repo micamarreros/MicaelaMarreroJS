@@ -27,7 +27,7 @@ const mostrarProductos = (productosElegidos) => {
             agregarAlCarrito(e.target.id);
             
             Swal.fire({
-                position: 'top-end',
+                position: 'center',
                 icon: 'success',
                 title: 'Se agregó el producto al carrito',
                 showConfirmButton: false,
@@ -52,17 +52,17 @@ botonesCategorias.forEach(boton => {
     })
 })
 
-const carrito = [];
+const carrito = JSON.parse(localStorage.getItem("productos-en-carrito")) || [];
 
 // Agrego al carrito, teniendo en cuenta la cantidad.  
 function agregarAlCarrito(id){
-    const exists = carrito.some(prod => prod.id === parseInt(id));
+    const exists = carrito.some(prod => prod.id === id);
     
         if (exists){ 
-            const index = carrito.findIndex(prod => prod.id === parseInt(id));
+            const index = carrito.findIndex(prod => prod.id === id);
             carrito[index].cantidad++;
         } else {
-            let productoEncontrado = productos.find( prod => prod.id == parseInt(id));
+            let productoEncontrado = productos.find( prod => prod.id == id);
             productoEncontrado.cantidad = 1;
             carrito.push(productoEncontrado);
             
