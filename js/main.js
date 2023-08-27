@@ -1,5 +1,5 @@
 // Fetch para traer productos
-fetch("./productos.json")
+fetch("./../productos.json")
     .then((response) => response.json())
     .then((data) => {
         productos = data;
@@ -45,17 +45,16 @@ const mostrarProductos = (productosElegidos) => {
     })
 }
 
-mostrarProductos(productos);
+// mostrarProductos(productos);
 
 // Filtro para productos con botones de categorias
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
         if (e.currentTarget.id !="todos") {
             const productosBoton = productos.filter(productos => productos.categoria.id === e.currentTarget.id);
             mostrarProductos(productosBoton);
         } else {
-            mostrarProductos(productos);
+            // mostrarProductos(productos);
         }
     })
 })

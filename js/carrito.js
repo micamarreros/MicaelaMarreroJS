@@ -70,11 +70,11 @@ function eliminarDelCarrito(id) {
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito () {
-    productosEnCarrito.length = 0;
+    productosEnCarrito.splice = (0, productosEnCarrito.length);
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    
+    actualizarTotal();
     // Muestro el carrito vacio
-    carrito();
+    carrito(productosEnCarrito);
 }
 
 // Mostrar precio total
@@ -87,9 +87,13 @@ botonComprar.addEventListener("click", comprarCarrito);
 
 function comprarCarrito() {
 
-    productosEnCarrito.length = 0;
+    productosEnCarrito.splice(0, productosEnCarrito.length);
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    actualizarTotal();
 
+    carrito(productosEnCarrito);
+    
     const carritoComprado = document.createTextNode("Gracias por tu compra :)");
+    contenedorCarrito.appendChild(carritoComprado);
     carritoComprado.classList.add("carrito-comprado");
 }
