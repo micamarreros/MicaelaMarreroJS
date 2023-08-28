@@ -1,5 +1,5 @@
 // Fetch para traer productos
-fetch("./../productos.json")
+fetch("../productos.json")
     .then((response) => response.json())
     .then((data) => {
         productos = data;
@@ -17,14 +17,14 @@ const mostrarProductos = (productosElegidos) => {
 
    productosElegidos.forEach(producto =>{
         const tarjetaProducto = document.createElement("div");
-        tarjetaProducto.className = "tarjeta-producto";
+        tarjetaProducto.className = "col-4 py-3 px-0 tarjeta-producto";
         tarjetaProducto.innerHTML = `
-                                    <img class="producto-img" src="${producto.img}" alt="${producto.nombre}">
+                                    <img class="rounded producto-img" src="${producto.img}" alt="${producto.nombre}">
                                     <div class="descripcion-productos">
                                         <h3 class="producto-nombre">${producto.nombre}</h3>
                                         <p>$ ${producto.precio}</p>
                                         
-                                        <button id='${producto.id}' class="btn-compra">Comprar</button>
+                                        <button id='${producto.id}' class="btn btn-secondary btn-compra">Comprar</button>
                                     </div>
                                     `;
         contenedorProductos.appendChild(tarjetaProducto);
@@ -45,8 +45,6 @@ const mostrarProductos = (productosElegidos) => {
     })
 }
 
-// mostrarProductos(productos);
-
 // Filtro para productos con botones de categorias
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -54,7 +52,7 @@ botonesCategorias.forEach(boton => {
             const productosBoton = productos.filter(productos => productos.categoria.id === e.currentTarget.id);
             mostrarProductos(productosBoton);
         } else {
-            // mostrarProductos(productos);
+            mostrarProductos(productos);
         }
     })
 })

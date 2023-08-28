@@ -11,14 +11,3 @@
 @import "../layout/navbar";
 /*-- carpeta utilities --*/
 @import "../utilities/mixins";
-
-.contenedor-productos {
-    padding: $p40;
-    .tarjeta-producto {
-        padding: $p20;
-        .btn-compra{
-            border-radius: $p20;
-            cursor: pointer;
-        }
-    }
-}

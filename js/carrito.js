@@ -25,14 +25,14 @@ function carrito(productosEnCarrito) {
         const div = document.createElement("div");
         div.classList.add("carrito-producto");
         div.innerHTML= `
-        <img class="carrito-producto-img" src="${producto.img}" alt="${producto.nombre}">
+        <img class="carrito-producto-img rounded" src="${producto.img}" alt="${producto.nombre}">
         <div class="carrito-descripcion-productos">
             <h5 class="carrito-producto-nombre">${producto.nombre}</h5>
             <p>$ ${producto.precio}</p>
             <p>${producto.cantidad}</p>
             <p>Subtotal ${producto.precio * producto.cantidad}</p>
        
-            <button class="btn-eliminar" onclick="eliminarDelCarrito(${producto.id})">Eliminar del carrito</button>
+            <button class="btn btn-secondary btn-eliminar" onclick="eliminarDelCarrito(${producto.id})">Eliminar del carrito</button>
         </div>
     `;
         
@@ -70,7 +70,7 @@ function eliminarDelCarrito(id) {
 botonVaciar.addEventListener("click", vaciarCarrito);
 
 function vaciarCarrito () {
-    productosEnCarrito.splice = (0, productosEnCarrito.length);
+    productosEnCarrito.splice(0, productosEnCarrito.length);
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     actualizarTotal();
     // Muestro el carrito vacio

@@ -1850,17 +1850,6 @@ h2 {
 
 /*-- carpeta utilities --*/
 /*------ para distintos tamaños -----*/
-.contenedor-productos {
-  padding: 40px;
-}
-.contenedor-productos .tarjeta-producto {
-  padding: 20px;
-}
-.contenedor-productos .tarjeta-producto .btn-compra {
-  border-radius: 20px;
-  cursor: pointer;
-}
-
 /*-- carpeta base --*/
 /*-- carpeta base --*/
 /* Colores */
