@@ -59,17 +59,17 @@
 
   <div class="row flex-nowrap">      
     <!----- ASIDE ----->
-    <div class="col-md-3">
-        <div class="d-flex flex-column align-items-center align-items-sm-start" id="sidebar">
+    <div class="col-md-3 aside">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" id="sidebar">
             <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
             </a>
-            <ul class="col-5 nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start" id="aside">
-              <li class="p-2 nav-item">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="aside">
+              <li class="nav-item">
                 <a href="./tienda.html" class="nav-link align-middle link-secondary">
-                  <i class="bi bi-arrow-90deg-left link-secondary"></i> Seguir Comprando</span>
+                  <i class="bi bi-arrow-90deg-left"></i> Seguir Comprando</span>
                 </a>
               </li>
-              <li class="p-2 nav-item">
+              <li class="nav-item">
                 <a href="./carrito.html" class="nav-link align-middle link-secondary">
                   <i class="bi bi-cart4 link-secondary"></i> Ver Carrito</span>
                 </a>
@@ -80,19 +80,19 @@
     <!----- ASIDE ----->
 
     <!----- MAIN ----->
-    <div class="row" id="contenedor-carrito">
+    <div class="row align-items-start" id="contenedor-carrito">
       
     </div>
 
     <div id="carrito-acciones" class="carrito-acciones disabled">
-      <button id="carrito-vaciar" class="btn btn-secondary"><i class="bi bi-trash3-fill"></i> Vaciar carrito</button>
+      <button id="carrito-vaciar"><i class="bi bi-trash3-fill"></i> Vaciar carrito</button>
 
       <div id="carrito-total">
         <h4>Total </h4>
         <p id="total">$ 0</p>
       </div>
 
-      <button id="carrito-comprar" class="btn btn-secondary">Comprar Ahora</button>
+      <button id="carrito-comprar">Comprar Ahora</button>
     </div>
     <!----- MAIN ----->
 </div>

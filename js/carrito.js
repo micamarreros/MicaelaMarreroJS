@@ -95,5 +95,4 @@ function comprarCarrito() {
     
     const carritoComprado = document.createTextNode("Gracias por tu compra :)");
     contenedorCarrito.appendChild(carritoComprado);
-    carritoComprado.classList.add("carrito-comprado");
 }
