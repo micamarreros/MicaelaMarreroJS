@@ -40,13 +40,13 @@
               <a class="nav-link" href="./proyectos.html">Proyectos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./servicios.html">Servicios</a>
+              <a class="nav-link" href="./contacto.html">Contacto</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./tienda.html">Tienda</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./contacto.html">Contacto</a>
+              <a class="nav-link" href="#">Carrito</a>
             </li>
           </ul>
         </div>
@@ -59,17 +59,17 @@
 
   <div class="row flex-nowrap">      
     <!----- ASIDE ----->
-    <div class="col-md-3 aside">
-        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100" id="sidebar">
+    <div class="col-md-4 aside">
+        <div class="row align-items-center align-items-sm-start px-5 pt-0">
             <a href="/" class="d-flex align-items-center pb-3 mb-md-0 me-md-auto text-decoration-none">
             </a>
-            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="aside">
-              <li class="nav-item">
+            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-sm-start py-lg-3" id="aside">
+              <li class="col-md-4 py-2 nav-item">
                 <a href="./tienda.html" class="nav-link align-middle link-secondary">
                   <i class="bi bi-arrow-90deg-left"></i> Seguir Comprando</span>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="col-md-4 py-2 nav-item">
                 <a href="./carrito.html" class="nav-link align-middle link-secondary">
                   <i class="bi bi-cart4 link-secondary"></i> Ver Carrito</span>
                 </a>
@@ -80,20 +80,24 @@
     <!----- ASIDE ----->
 
     <!----- MAIN ----->
-    <div class="row align-items-start" id="contenedor-carrito">
-      
-    </div>
+    <div class="col-md-8">
+      <div class="row" id="contenedor-carrito">
 
-    <div id="carrito-acciones" class="carrito-acciones disabled">
-      <button id="carrito-vaciar"><i class="bi bi-trash3-fill"></i> Vaciar carrito</button>
-
-      <div id="carrito-total">
-        <h4>Total </h4>
-        <p id="total">$ 0</p>
       </div>
 
-      <button id="carrito-comprar">Comprar Ahora</button>
+      <div class="row py-4" id="carrito-acciones">
+        <button class="col-md-3 btn btn-secondary" id="carrito-vaciar">Vaciar carrito</button>
+
+        <div class="col-md-2" id="carrito-total">
+          <h4>Total </h4>
+          <p id="total">$ 0</p>
+        </div>
+
+        <button class="col-md-3 btn btn-secondary" id="carrito-comprar">Comprar Ahora</button>
+
+      </div>
     </div>
+
     <!----- MAIN ----->
 </div>
 

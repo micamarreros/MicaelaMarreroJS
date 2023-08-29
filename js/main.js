@@ -17,7 +17,7 @@ const mostrarProductos = (productosElegidos) => {
 
    productosElegidos.forEach(producto =>{
         const tarjetaProducto = document.createElement("div");
-        tarjetaProducto.className = "col-4 py-3 px-0 tarjeta-producto";
+        tarjetaProducto.className = "col-md-4 py-3 px-0 tarjeta-producto";
         tarjetaProducto.innerHTML = `
                                     <img class="rounded producto-img" src="${producto.img}" alt="${producto.nombre}">
                                     <div class="descripcion-productos">

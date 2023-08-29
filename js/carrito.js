@@ -23,7 +23,7 @@ function carrito(productosEnCarrito) {
     productosEnCarrito.forEach(producto => {
 
         const div = document.createElement("div");
-        div.classList.add("carrito-producto");
+        div.className = "col-md-4 py-3 px-0 carrito-producto"
         div.innerHTML= `
         <img class="carrito-producto-img rounded" src="${producto.img}" alt="${producto.nombre}">
         <div class="carrito-descripcion-productos">
@@ -90,7 +90,6 @@ function comprarCarrito() {
     productosEnCarrito.splice(0, productosEnCarrito.length);
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     actualizarTotal();
-
     carrito(productosEnCarrito);
     
     const carritoComprado = document.createTextNode("Gracias por tu compra :)");
