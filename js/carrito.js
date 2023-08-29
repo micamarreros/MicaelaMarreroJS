@@ -91,7 +91,39 @@ function comprarCarrito() {
     localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
     actualizarTotal();
     carrito(productosEnCarrito);
-    
-    const carritoComprado = document.createTextNode("Gracias por tu compra :)");
-    contenedorCarrito.appendChild(carritoComprado);
+
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: 'btn btn-success',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: 'Estás seguro?',
+        text: "Comprar?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, realizar compra',
+        cancelButtonText: 'Cancelar',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            'Gracias',
+            'Se ha realizado la compra.',
+            'success'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          )
+        }
+      })
 }
